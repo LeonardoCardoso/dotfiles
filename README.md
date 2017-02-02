@@ -1,6 +1,6 @@
 # Leo's dotfiles
 
-This repo contains my dotfiles. It contains a very basic set of things so far and may change very often.
+This repo contains my dotfiles. It contains a very basic set of things so far and may be changed very often.
 
 ![term](images/term.png) 
 
@@ -8,6 +8,9 @@ This repo contains my dotfiles. It contains a very basic set of things so far an
 
 * [Configurations](#configurations)
 * [Installation](#installation)
+    * [Give permission to execute the bash files](#give-permission-to-execute-the-bash-files)
+    * [Run it](#run-it)
++ [Shortcuts - separated by categories](#shortcuts---separated-by-categories)
 * [Related Repos](#related-repos)
 * [License](#license)
   
@@ -16,20 +19,105 @@ This repo contains my dotfiles. It contains a very basic set of things so far an
 TODO
 
 * [ ] Oh My ZSH!
-    * [ ] Config
+    * [x] Installation
+    * [ ] Plugins
     * [ ] Terminal theme
+    * [x] Config
 * [ ] Git
     * [ ] Config
     * [ ] Aliases
 * [ ] Xcode
+    * [ ] Terminal tools 
 * [ ] Brew
 * [ ] Gems
 
 ## Installation
 
-**Note:** If you want to use this repo as bootstrap for your dotfiles, first check the code and remove what you don't want or need. When you are sure to try it out, do the following:
+**Note:** If you want to use this repo as bootstrap for your dotfiles, first check the code and remove what you don't want or need. When you are sure about trying it out, do the following:
 
-TODO
+##### Give permission to execute the bash files
+
+```sudo chmod a+x ./*.sh ```
+
+##### Run it
+
+```./main.sh ```
+
+### Shortcuts - separated by categories
+
+* ```gitzip <file> ```
+	* Zip folder watching .gitignore and last commit
+
+* ```extract <file> ```
+    * Extract any zipped file with its proper algorithm
+        * zip -> unzip
+        * bz2 -> bunzip2
+        * dmg -> hdiutil mount
+        * etc.
+
+---
+
+* ```disabledashboard ```
+	* Disable dashboard
+
+* ```hidehidden ```
+	* Hide "hidden" files
+
+* ```showhidden ```
+	* Show hidden files
+
+* ```whereami ```
+    * Display context location	
+
+---	
+
+* ```dockspace ```
+	* Add a space on Mac docker
+	
+* ```openprofiles ```
+	* Open profile file
+
+* ```sourceprofiles ```
+	* Source profile file
+
+---
+
+* ```cbuild ```
+	* Build the Carthage package
+
+* ```deriveddata ```
+    * Clear Xcode's derived data
+
+* ```pbuild ```
+	* Lint the pod
+
+* ```ptrunk <pod name> ```
+	* Trunk the pod
+
+* ```sbuild ```
+	* Build the Swift package
+
+---
+
+* ```berr ```
+	* Release gem
+
+* ```bedi ```
+	* Danger wizard
+
+* ```bedl ```
+	* Execute Danger locally
+
+* ```bi ```
+	* Ruby gem wizard
+
+--- 
+
+* ```nrs <script> ```
+	* npm run-script
+
+---	
+	
 
 ## Related Repos
 
