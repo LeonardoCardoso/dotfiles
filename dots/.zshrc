@@ -129,9 +129,6 @@ function showhidden(){
 function hidehidden(){
 	defaults write com.apple.finder AppleShowAllFiles NO && killall Finder
 }
-function disabledashboard(){
-	defaults write com.apple.dashboard mcx-disabled -boolean YES && killall Dock
-}
 
 function openprofiles() {
 	subl ~/.zshrc

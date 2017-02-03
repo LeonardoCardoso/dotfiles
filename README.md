@@ -57,9 +57,6 @@ TODO
 
 ---
 
-* ```disabledashboard ```
-	* Disable dashboard
-
 * ```hidehidden ```
 	* Hide "hidden" files
 
