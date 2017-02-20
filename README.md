@@ -30,6 +30,7 @@ TODO
     * [ ] Terminal tools 
 * [ ] Brew
 * [ ] Gems
+* [ ] Apps  
 
 ## Installation
 
@@ -93,6 +94,10 @@ TODO
 
 * ```sbuild ```
 	* Build the Swift package
+
+* ```rxmvvm "<Your Class Name>" "<Project>" "<Author>" "<Website>"```
+	* Create 3 `.swift` files for Rx + MVVM development. `ViewController`, `ViewModel`, `View`. All connected.
+	* `Author` and `Website` go on the header of the files.
 
 ---
 

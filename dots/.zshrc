@@ -203,6 +203,188 @@ function extract() {
   fi
 }
 
+function rxmvvm {
+
+# Usage = rxmvvm "Onboarding" "Test" "Leonardo Cardoso" "leocardz.com"
+# $1 = Name of File
+# $2 = Name of Project
+# $3 = Name of Author
+# $4 = Website
+
+echo "//
+//  $1ViewController.swift
+//  $2
+//
+//  Created by $3 on `date +%d/%m/%Y`.
+//  Copyright © 2017 $4. All rights reserved.
+//
+
+import UIKit
+#if !RX_NO_MODULE
+    import RxSwift
+    import RxCocoa
+#endif
+
+class $1ViewController: BaseViewController {
+
+    // MARK: - Rx
+    private let disposeBag: DisposeBag = DisposeBag()
+
+    // MARK: - Properties
+    private var customView: $1View?
+
+    // MARK: - Lifecycle
+    override func viewDidLoad() { super.viewDidLoad() }
+
+    override func didReceiveMemoryWarning() { super.didReceiveMemoryWarning() }
+
+    // MARK: - Initializers
+    init(viewModel: $1ViewModelType) {
+
+        super.init()
+
+        self.customView = $1View(superview: self.view)
+        self.customView?.layout()
+
+        self.configureBindings(viewModel: viewModel)
+
+    }
+
+    required convenience init?(coder aDecoder: NSCoder) { fatalError(\"init(coder:) has not been implemented\") }
+
+    // MARK: - ViewModel Configuration
+    private func configureBindings(viewModel: $1ViewModelType) {
+
+        // 2-way Binding
+
+        // Input
+
+        // Output
+
+    }
+
+}" > $2/$1ViewController.swift
+
+echo "//
+//  $1ViewModel.swift
+//  $2
+//
+//  Created by $3 on `date +%d/%m/%Y`.
+//  Copyright © 2017 $4. All rights reserved.
+//
+
+#if !RX_NO_MODULE
+    import RxSwift
+    import RxCocoa
+#endif
+
+protocol $1ViewModelType {
+
+    // MARK: - 2-way Binding
+
+    // MARK: - Input
+
+    // MARK: - Output
+
+    // MARK: - Flow
+
+    // MARK: - Initializers
+    init()
+
+}
+
+class $1ViewModel: $1ViewModelType {
+
+    // MARK: - Properties
+
+    // MARK: - Rx
+    private let disposeBag: DisposeBag = DisposeBag()
+
+    // MARK: - 2-way Binding
+
+    // MARK: - Input
+
+    // MARK: - Output
+
+    // MARK: - Flow
+
+    // MARK: - Initializers
+    required init() {
+
+    }
+    
+}" > $2/$1ViewModel.swift
+
+echo "//
+//  $1View.swift
+//  $2
+//
+//  Created by $3 on `date +%d/%m/%Y`.
+//  Copyright © 2017 $4. All rights reserved.
+//
+
+import UIKit
+import SnapKit
+#if !RX_NO_MODULE
+    import RxSwift
+    import RxCocoa
+#endif
+
+class $1View: UIView {
+
+    // MARK: - Properties
+    var wrapperView: UIView?
+
+    // MARK: - Initializers
+    init(superview: UIView) {
+
+        super.init(frame: .zero)
+
+        self.configureSubviews()
+
+        if let view: UIView = self.wrapperView { self.addSubview(view) }
+
+        superview.addSubview(self)
+
+    }
+
+    required init?(coder aDecoder: NSCoder) { super.init(coder: aDecoder) }
+
+    // MARK: - Functions
+    // Configure SubViews
+    func configureSubviews() {
+
+        self.wrapperView = UIView().then {
+
+            \$0.backgroundColor = .white
+
+        }
+
+    }
+
+    // Set up layout
+    func layout() {
+
+        self.snp.makeConstraints {
+
+            \$0.width.equalToSuperview()
+            \$0.height.equalToSuperview()
+
+        }
+
+        self.wrapperView?.snp.makeConstraints {
+
+            \$0.width.equalToSuperview()
+            \$0.height.equalToSuperview()
+
+        }
+
+    }
+
+}" > $2/$1View.swift
+
+}
+
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
