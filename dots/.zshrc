@@ -145,7 +145,7 @@ function dockspace() {
 # -------
 
 function ptrunk() {
-	pod trunk push $@.podspec
+	pod trunk push $@.podspec --allow-warnings --use-libraries
 }
 
 function pbuild() {
